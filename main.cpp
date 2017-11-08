@@ -54,20 +54,18 @@ void task9_3() {
 }
 
 void task9_4() {
-    int a = 0;
-    scanf("%d", &a);
+    float a = 0;
+    cout << "Type a" << endl;
+    scanf("%f", &a);
 
-    int s = 0;
-    int k = 0;
+    float s = 0;
+    float k = 1;
 
-    while (s <= a) {
-        k = k + 1;
-        s = 1 + 1 / k;
+    while (s < a) {
+        cout << "sum " << s << endl;
+        s = s + 1 / k;
+        k++;
     }
-
-    s = 1 + 1 / k;
-    k = k + 1;
-
     cout << "max к " << k << endl;
     cout << "sum " << s << endl;
 }
@@ -92,7 +90,7 @@ void task9_5() {
 }
 
 int main() {
-    
+
     setlocale(LC_ALL, "RUS");
 
     int command = 0;
@@ -109,6 +107,7 @@ int main() {
             task9_3();
             break;
         case 4:
+            task9_4();
             break;
         case 5:
             task9_5();
