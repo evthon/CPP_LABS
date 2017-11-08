@@ -106,6 +106,25 @@ void task9_5() {
     cout << "amount: " << cash << endl;
 }
 
+void task9_6() {
+    int a = 0;
+    int b = 0;
+    cout << "Type a:" << endl;
+    scanf("%d", &a);
+    cout << "Type b:" << endl;
+    scanf("%d", &b);
+    int nod = 0;
+    while (a != b) {
+        if (a > b) {
+            a -= b;
+        }
+        else {
+            b -= a;
+        }
+    }
+    cout << "result: " << a << endl;
+}
+
 int main() {
 
     setlocale(LC_ALL, "RUS");
@@ -132,8 +151,8 @@ int main() {
         case 5:
             task9_5();
             break;
-        case 7:
-
+        case 6:
+            task9_6();
             break;
     }
     return 0;
