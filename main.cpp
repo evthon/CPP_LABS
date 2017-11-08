@@ -37,6 +37,23 @@ void task9_1() {
     cout << "free space: " << freeSpace << endl;
 }
 
+void task9_2() {
+    cout << "Type a:" << endl;
+    int a = 0;
+    scanf("%d", &a);
+    cout << "Type b:" << endl;
+    int b = 0;
+    scanf("%d", &b);
+
+    int ch = 0;
+    while (a >= b) {
+        a = a - b;
+        ch++;
+    }
+    cout << "result: " << ch << endl;
+    cout << "rest: " << a << endl;
+}
+
 void task9_3() {
     cout << "Type n:" << endl;
     int n = 0;
@@ -79,7 +96,7 @@ void task9_5() {
 
     int months = 0;
 
-    while (cash < 1100) {
+    while (cash <= 1100) {
         cout << cash << endl;
         cash = cash * (1 + percent);
         months++;
@@ -102,6 +119,9 @@ int main() {
     switch (command) {
         case 1:
             task9_1();
+            break;
+        case 2:
+            task9_2();
             break;
         case 3:
             task9_3();
