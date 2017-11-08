@@ -1,0 +1,3 @@
+/home/urboy/Desktop/StudyShitt/cpp_labs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/urboy/Desktop/StudyShitt/cpp_labs/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/urboy/Desktop/StudyShitt/cpp_labs/cmake-build-debug/CMakeFiles/tempProject.dir
