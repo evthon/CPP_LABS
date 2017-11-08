@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+int pow(int num, int power) {
+    int curPow = 1;
+    while (curPow < power) {
+        num = num * num;
+        curPow++;
+    }
+    return num;
+}
+
 void task9_1() {
     cout << "Type a:" << endl;
     int a = 0;
@@ -28,29 +37,57 @@ void task9_1() {
     cout << "free space: " << freeSpace << endl;
 }
 
-int pow(int num, int power) {
-    int curPow = 1;
-    while (curPow < power) {
-        num = num * num;
-        curPow++;
-    }
-    return num;
-}
-
 void task9_3() {
     cout << "Type n:" << endl;
     int n = 0;
-    int k = 0;
+    int k = 1;
 
     scanf("%d", &n);
 
     if (n > 1) {
         while (pow(3,k) < n) {
+            cout << "pow (3," << k << ") = " << pow(3,k) << endl;
             k++;
         }
     }
-    k--;
     cout << "result: " << k << endl;
+}
+
+void task9_4() {
+    int a = 0;
+    scanf("%d", &a);
+
+    int s = 0;
+    int k = 0;
+
+    while (s <= a) {
+        k = k + 1;
+        s = 1 + 1 / k;
+    }
+
+    s = 1 + 1 / k;
+    k = k + 1;
+
+    cout << "max к " << k << endl;
+    cout << "sum " << s << endl;
+}
+
+void task9_5() {
+    float cash = 1000;
+
+    float percent = 0;
+
+    percent = percent / 100;
+
+    int months = 0;
+
+    while (cash < 1100) {
+        cash = cash * (1 + percent);
+        months++;
+    }
+
+    cout << "months: " << months << endl;
+    cout << "amount: " << cash << endl;
 }
 
 int main() {
@@ -70,8 +107,10 @@ int main() {
         case 3:
             task9_3();
             break;
+        case 4:
+            break;
         case 5:
-
+            task9_5();
             break;
         case 7:
 
