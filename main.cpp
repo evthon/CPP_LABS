@@ -75,13 +75,14 @@ void task9_4() {
 void task9_5() {
     float cash = 1000;
 
-    float percent = 0;
+    float percent = 4;
 
     percent = percent / 100;
 
     int months = 0;
 
     while (cash < 1100) {
+        cout << cash << endl;
         cash = cash * (1 + percent);
         months++;
     }
@@ -91,7 +92,7 @@ void task9_5() {
 }
 
 int main() {
-
+    
     setlocale(LC_ALL, "RUS");
 
     int command = 0;
