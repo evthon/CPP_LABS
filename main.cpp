@@ -113,7 +113,7 @@ void task9_6() {
     scanf("%d", &a);
     cout << "Type b:" << endl;
     scanf("%d", &b);
-    int nod = 0;
+
     while (a != b) {
         if (a > b) {
             a -= b;
