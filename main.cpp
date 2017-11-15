@@ -167,6 +167,17 @@ void task10_6() {
 
 }
 
+void task10_7() {
+    float mass[10], I=0, sum=0;
+    for(int i=0; i<10; i++) {
+        mass[i]=4*I/5;
+        sum+=mass[i];
+        cout << mass[i] << " ";
+        I++;
+    };
+    cout << endl << "Сумма = " << sum;
+}
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     int command = 0;
@@ -199,6 +210,10 @@ int main() {
             task10_6();
             break;
         }
+        case 7: {
+            task10_7();
+            break;
+        }
         case 0: {
             task10_1();
             task10_2();
@@ -206,6 +221,7 @@ int main() {
             task10_4();
             task10_5();
             task10_6();
+            task10_7();
         }
         default: {
             break;
