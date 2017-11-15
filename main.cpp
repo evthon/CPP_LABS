@@ -1,4 +1,5 @@
 #include <iostream>
+#include "windows.h"
 using namespace std;
 
 int pow(int num, int power) {
@@ -142,16 +143,29 @@ void task9_7() {
 }
 
 void task9_8() {
-    
+    float Apre=2, Anew, K=2, Ep;
+    cout << "Введите E: ";
+    cin >> Ep;
+    while(true) {
+        Anew = 2+1/Apre;
+        K++;
+        if(Anew-Apre<Ep && Apre-Anew<Ep) {
+            cout << "K = " << K << endl;
+            cout << "Ak = " << Anew << endl;
+            cout << "Ak-1 = " << Apre << endl;
+            break;
+        };
+        Apre = Anew;
+    }
 }
 
 int main() {
 
-    setlocale(LC_ALL, "RUS");
+    SetConsoleOutputCP(CP_UTF8);
 
     int command = 0;
 
-    scanf("%d", &command);
+   cin >> command;
 
     cout << "Task " << command << endl;
 
