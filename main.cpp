@@ -149,49 +149,67 @@ void task10_5() {
 }
 
 void task10_6() {
-    int N1, N2, F1=1, F2=1;
+    int N1, N2, F1=1, F2=1, k;
+    float K=3, F3;
     cout << "N1: ";
     cin >> N1;
     cout << "N2: ";
     cin >> N2;
-    int mass[20];
-    for(int k=3; k<N2; k++) {
-
+    float mass[20];
+    for(k=0; k<20; k++, K++) {
+        F3=F1+F2;
+        mass[k]=F3/K;
+        F1=F2; F2=F3;
+    }
+    for(N1; N1<=N2; N1++) {
+        cout << mass[N1] << " ";
     }
 
 }
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-
     int command = 0;
-
+    cout << "Task: ";
     cin >> command;
-
     cout << "Task " << command << endl;
 
     switch (command) {
-        case 1:
+        case 1: {
             task10_1();
             break;
-        case 2:
+        }
+        case 2: {
             task10_2();
             break;
-        case 3:
+        }
+        case 3: {
             task10_3();
             break;
-        case 4:
+        }
+        case 4: {
             task10_4();
             break;
-        case 5:
+        }
+        case 5: {
             task10_5();
             break;
-        case 0:
+        }
+        case 6: {
+            task10_6();
             break;
-        default:
-            cout << "wrong command" << endl;
+        }
+        case 0: {
+            task10_1();
+            task10_2();
+            task10_3();
+            task10_4();
+            task10_5();
+            task10_6();
+        }
+        default: {
             break;
+        }
     }
-
     return 0;
 }
