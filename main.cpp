@@ -113,20 +113,36 @@ void task10_4() {
 }
 
 void task10_5() {
-    int n, i, a, d;
-    cout << "n:" << endl;
-    cin >> n;
+    int n, a, d, check;
 
     cout << "n:" << endl;
     cin >> n;
 
-    cout << "n:" << endl;
-    cin >> n;
+    cout << "a:" << endl;
+    cin >> a;
 
-    int f[n];
+    cout << "d:" << endl;
+    cin >> d;
+
+    int i = 0;
+
+    float f[15];
+
+    while (i < 15) {
+        cout << "f[" << i << "]:" << endl;
+        cin >> f[i];
+        i++;
+    }
+
+    i = 0;
 
     while (i < 15) {
         f[i] = rand()%10;
+        check = a/d;
+        if (f[i] == check) {
+            cout << "f[" << i << "] == " << check;
+        }
+        d *= d;
         i++;
     }
 }
