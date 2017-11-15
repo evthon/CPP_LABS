@@ -36,13 +36,19 @@ void task10_3() {
 void task10_4() {
     int n = 0;
     cin >> n;
-    int i = 1;
+    float i = 1;
 
-    int sum = 0;
+    float sum = 0;
+
     while (i <= n) {
         sum += (i + 1)/(2*i);
         i++;
     }
+
+    cout << "result: " << sum << endl;
+}
+
+void task10_5() {
 
 }
 
