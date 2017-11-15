@@ -52,6 +52,10 @@ void task10_5() {
 
 }
 
+void task10_6() {
+
+}
+
 int main() {
     setlocale(LC_ALL, "RUS");
 
