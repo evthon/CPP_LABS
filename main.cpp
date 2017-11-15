@@ -66,6 +66,7 @@ void task10_2() {
 }
 
 void task10_3() {
+    cout << "n:" << endl;
     int n = 0;
     cin >> n;
 
@@ -97,6 +98,7 @@ void task10_3() {
 }
 
 void task10_4() {
+    cout << "n:" << endl;
     int n = 0;
     cin >> n;
     float i = 1;
@@ -112,7 +114,22 @@ void task10_4() {
 }
 
 void task10_5() {
-    int f[2];
+    int n, i, a, d;
+    cout << "n:" << endl;
+    cin >> n;
+
+    cout << "n:" << endl;
+    cin >> n;
+
+    cout << "n:" << endl;
+    cin >> n;
+
+    int f[n];
+
+    while (i < 15) {
+        f[i] = rand()%10;
+        i++;
+    }
 }
 
 void task10_6() {
@@ -141,6 +158,9 @@ int main() {
             break;
         case 4:
             task10_4();
+            break;
+        case 5:
+            task10_5();
             break;
         case 0:
             break;
