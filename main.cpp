@@ -1,4 +1,5 @@
 #include <iostream>
+#include "windows.h"
 using namespace std;
 
 void task10_1() {
@@ -116,10 +117,11 @@ void task10_5() {
 
 void task10_6() {
 
+
 }
 
 int main() {
-    setlocale(LC_ALL, "RUS");
+    SetConsoleOutputCP(CP_UTF8);
 
     int command = 0;
 
