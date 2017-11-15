@@ -133,7 +133,15 @@ void task10_5() {
 }
 
 void task10_6() {
+    int N1, N2, F1=1, F2=1;
+    cout << "N1: ";
+    cin >> N1;
+    cout << "N2: ";
+    cin >> N2;
+    int mass[20];
+    for(int k=3; k<N2; k++) {
 
+    }
 
 }
 
