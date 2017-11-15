@@ -125,6 +125,26 @@ void task9_6() {
     cout << "result: " << a << endl;
 }
 
+int fib(int n) {
+    if (n <= 2) {
+        return 1;
+    } else {
+        return (n--) + (n - 2);
+    }
+}
+
+void task9_7() {
+    int n = 0;
+    cin >> n;
+
+    cout << "Предыдущее " << fib(n-1) << endl;
+    cout << "Следующее " << fib(n+1) << endl;
+}
+
+void task9_8() {
+    
+}
+
 int main() {
 
     setlocale(LC_ALL, "RUS");
@@ -153,6 +173,12 @@ int main() {
             break;
         case 6:
             task9_6();
+            break;
+        case 7:
+            task9_7();
+            break;
+        case 8:
+            task9_8();
             break;
     }
     return 0;
