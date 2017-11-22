@@ -2,6 +2,14 @@
 #include "windows.h"
 using namespace std;
 
+int pow(int a, int s) {
+    int a1 = a;
+    for(int i=1; i<s; i++) {
+        a1*=a;
+    }
+    return a1;
+}
+
 void task10_1() {
     int a = 1;
     int x = 0;
@@ -178,6 +186,16 @@ void task10_7() {
     cout << endl << "Сумма = " << sum;
 }
 
+void task10_8() {
+    double mass[10] ={1}, sum=0;
+    for(int i=1; i<10; i++) {
+        mass[i] = pow(-1,i)*mass[i-1]/3.0;
+        cout << mass[i] << " ";
+        sum+=mass[i];
+    };
+    cout << endl << "Сумма = " << sum;
+}
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     int command = 0;
@@ -214,6 +232,10 @@ int main() {
             task10_7();
             break;
         }
+        case 8: {
+            task10_8();
+            break;
+        }
         case 0: {
             task10_1();
             task10_2();
@@ -222,6 +244,7 @@ int main() {
             task10_5();
             task10_6();
             task10_7();
+            task10_8();
         }
         default: {
             break;
