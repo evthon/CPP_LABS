@@ -24,7 +24,14 @@ void task6(int a, int b, int c) {
     cout << "a: " << a << " b: " << b << " c: " << c << endl;
 }
 
-
+void task7(int n,float *test) {
+    int i = 0;
+    test[0] = 0.5;
+    for (i = 1; i < n; i++) {
+        test[i] = (i+1)/(2 * i);
+        cout << test[i] << endl;
+    }
+}
 
 int main() {
     int a;
@@ -38,23 +45,17 @@ int main() {
             cin >> a;
             cin >> b;
             cin >> c;
-            task6(a,b,c);
+            task6(a, b, c);
             break;
         case 7:
-
+            float *pointr;
+            float testVal[] = {3, 22};
+            int n = 0;
+            cin >> n;
+            pointr = testVal;
+            task7(n, pointr);
+            cout << testVal[0];
             break;
     }
     return 0;
 }
-
-/*
-    void task7(int *test) {
-        cout << test << endl;
-        *test = 4;
-    }
-    int *pointr;
-    int testVal = 2;
-    pointr = &testVal;
-    task7(pointr);
-    cout << testVal;
- */
