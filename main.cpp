@@ -24,9 +24,7 @@ void task6(int a, int b, int c) {
     cout << "a: " << a << " b: " << b << " c: " << c << endl;
 }
 
-void task7() {
 
-}
 
 int main() {
     int a;
@@ -42,8 +40,21 @@ int main() {
             cin >> c;
             task6(a,b,c);
             break;
-        default:
+        case 7:
+
             break;
     }
     return 0;
 }
+
+/*
+    void task7(int *test) {
+        cout << test << endl;
+        *test = 4;
+    }
+    int *pointr;
+    int testVal = 2;
+    pointr = &testVal;
+    task7(pointr);
+    cout << testVal;
+ */
