@@ -1,27 +1,23 @@
 #include <iostream>
 using namespace std;
 
-void task6(int a, int b, int c) {
+void task6(int *a, int *b, int *c) {
     int temp = 0;
 
-    bool passed = false;
-
-    while (!passed) {
-        passed = true;
-        if (a > b) {
-            temp = a;
-            a = b;
-            b = temp;
-            passed = false;
+    while (true) {
+        if (*a > *b) {
+            temp = *a;
+            *a = *b;
+            *b = temp;
         }
-        if (b > c) {
-            temp = b;
-            b = c;
-            c = temp;
-            passed = false;
+        if (*b > *c) {
+            temp = *b;
+            *b = *c;
+            *c = temp;
+        } else {
+            break;
         }
     }
-    cout << "a: " << a << " b: " << b << " c: " << c << endl;
 }
 
 void task7(int n,float *test) {
@@ -42,10 +38,22 @@ int main() {
             int a;
             int b;
             int c;
+            cout << "type a" << endl;
             cin >> a;
+            cout << "type b" << endl;
             cin >> b;
+            cout << "type c" << endl;
             cin >> c;
-            task6(a, b, c);
+            int *point_a;
+            point_a = &a;
+            int *point_b;
+            point_b = &b;
+            int *point_c;
+            point_c = &c;
+
+            task6(point_a, point_b, point_c);
+
+            cout << "a: " << a << " b: " << b << " c: " << c << endl;
             break;
         case 7:
             float *pointr;
