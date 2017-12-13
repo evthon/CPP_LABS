@@ -28,11 +28,14 @@ void task7(int n,float *arr) {
     }
 }
 
-void task8(int n,float *arr, int *minVal, int *maxVal) {
+void task8(int n,float *arr, int *minVal, int *maxVal, float *posSum) {
     *minVal = arr[0];
     *maxVal = arr[0];
     for (int i = 0; i < n; i++) {
         cout << "arr = " << arr[i] << endl;
+        if (arr[i] > 0) {
+            *posSum += arr[i];
+        }
         if (arr[i] > *maxVal) {
             *maxVal = arr[i];
         }
@@ -91,15 +94,17 @@ int main() {
             cin >> n;
             int *point_max_val = &maxVal;
             int *point_min_val = &minVal;
+            float *pointer_pos_sum = &positiveSum;
             float task8arr[n];
             for (i = 0; i < n; i++) {
                 cout << "arr[" << i << "]:" << endl;
                 cin >> task8arr[i];
             }
             arr_pointer = task8arr;
-            task8(n, arr_pointer, point_min_val, point_max_val);
+            task8(n, arr_pointer, point_min_val, point_max_val, pointer_pos_sum);
             cout << "min: " << minVal << endl;
             cout << "max: " << maxVal << endl;
+            cout << "positive sum: " << positiveSum << endl;
             break;
         }
     }
