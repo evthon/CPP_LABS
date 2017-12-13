@@ -3,7 +3,6 @@ using namespace std;
 
 void task6(int *a, int *b, int *c) {
     int temp = 0;
-
     while (true) {
         if (*a > *b) {
             temp = *a;
@@ -20,13 +19,17 @@ void task6(int *a, int *b, int *c) {
     }
 }
 
-void task7(int n,float *test) {
+void task7(int n,float *arr) {
     int i = 0;
-    test[0] = 0.5;
+    arr[0] = 0.5;
     for (i = 1; i < n; i++) {
-        test[i] = (i+1)/(2 * i);
-        cout << test[i] << endl;
+        arr[i] = (i+1.0)/(2.0 * i);
+        cout << i << ": " << arr[i] << endl;
     }
+}
+
+void task8(int n,float *test) {
+
 }
 
 int main() {
@@ -57,12 +60,15 @@ int main() {
             break;
         case 7:
             float *pointr;
-            float testVal[] = {3, 22};
             int n = 0;
             cin >> n;
+            float testVal[n];
             pointr = testVal;
             task7(n, pointr);
-            cout << testVal[0];
+            int i = 0;
+            for (i = 0; i < n; i++) {
+                cout << i << " :" << pointr[i] << endl;
+            }
             break;
     }
     return 0;
