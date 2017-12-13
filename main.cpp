@@ -28,14 +28,31 @@ void task7(int n,float *arr) {
     }
 }
 
-void task8(int n,float *test) {
-
+void task8(int n,float *arr, int *minVal, int *maxVal) {
+    *minVal = arr[0];
+    *maxVal = arr[0];
+    for (int i = 0; i < n; i++) {
+        cout << "arr = " << arr[i] << endl;
+        if (arr[i] > *maxVal) {
+            *maxVal = arr[i];
+        }
+        if (arr[i] < *minVal) {
+            *minVal = arr[i];
+        }
+    }
 }
 
 int main() {
     int a;
     cout << "Введите номер задания: ";
     cin >> a;
+
+    float *arr_pointer;
+    int n = 0;
+    int i = 0;
+    int maxVal = 0;
+    int minVal = 0;
+    float positiveSum = 0;
     switch (a) {
         case 6:
             int a;
@@ -58,18 +75,33 @@ int main() {
 
             cout << "a: " << a << " b: " << b << " c: " << c << endl;
             break;
-        case 7:
-            float *pointr;
-            int n = 0;
+        case 7: {
+            cout << "n:" << n << endl;
             cin >> n;
-            float testVal[n];
-            pointr = testVal;
-            task7(n, pointr);
-            int i = 0;
+            float task7arr[n];
+            arr_pointer = task7arr;
+            task7(n, arr_pointer);
             for (i = 0; i < n; i++) {
-                cout << i << " :" << pointr[i] << endl;
+                cout << i << " :" << arr_pointer[i] << endl;
             }
             break;
+        }
+        case 8: {
+            cout << "type n" << endl;
+            cin >> n;
+            int *point_max_val = &maxVal;
+            int *point_min_val = &minVal;
+            float task8arr[n];
+            for (i = 0; i < n; i++) {
+                cout << "arr[" << i << "]:" << endl;
+                cin >> task8arr[i];
+            }
+            arr_pointer = task8arr;
+            task8(n, arr_pointer, point_min_val, point_max_val);
+            cout << "min: " << minVal << endl;
+            cout << "max: " << maxVal << endl;
+            break;
+        }
     }
     return 0;
 }
