@@ -24,7 +24,7 @@ void task2() {
 }
 
 void task3() {
-    double r1,r2,S1,S2,S12;
+    float r1,r2,S1,S2,S12;
     cout << "Введите R1: ";
     cin >> r1;
     cout << "Введите R2: ";
@@ -36,7 +36,7 @@ void task3() {
 }
 
 void task4() {
-    int a,b,sum;
+    float a,b,sum;
     cout << "Введите a: ";
     cin >> a;
     cout << "Введите b: ";
@@ -46,7 +46,7 @@ void task4() {
 }
 
 void task5() {
-    int a,b,c,sum;
+    float a,b,c,sum;
     cout << "Введите a: ";
     cin >> a;
     cout << "Введите b: ";
@@ -82,7 +82,7 @@ void task7() {
 }
 
 void task8() {
-    int H=17, t=1, S;
+    float H=17, t=1, S;
     S = (10*t*t)/2;
     S = H-S;
     cout << "Ответ = " << S;
