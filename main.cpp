@@ -66,9 +66,8 @@ double task5(int *x, int *y) {
 void task7(int n,float *test) {
     int i = 0;
     test[0] = 0.5;
-    for (i = 1; i < n; i++) {
+    for (i = 1; i <= n; i++) {
         test[i] = (i+1.0)/(2.0 * i);
-        cout << i << ": " << test[i] << endl;
     }
 }
 
@@ -86,6 +85,14 @@ void task8(int n,float *arr, int *minVal, int *maxVal, float *posSum) {
         if (arr[i] < *minVal) {
             *minVal = arr[i];
         }
+    }
+}
+
+void task9(float *N_p) {
+    int N = *N_p;
+    *N_p = 1;
+    for(int i=1; i<=N; i++) {
+        *N_p*=i;
     }
 }
 
@@ -172,18 +179,18 @@ int main() {
             cout << "a: " << a << " b: " << b << " c: " << c << endl;
             break;
         case 7: {
-            cout << "n:" << n << endl;
+            cout << "n: ";
             cin >> n;
             float task7arr[n];
             arr_pointer = task7arr;
             task7(n, arr_pointer);
-            for (i = 0; i < n; i++) {
+            for (i = 0; i <= n; i++) {
                 cout << i << " :" << arr_pointer[i] << endl;
             }
             break;
         }
         case 8: {
-            cout << "type n" << endl;
+            cout << "type n: ";
             cin >> n;
             int *point_max_val = &maxVal;
             int *point_min_val = &minVal;
@@ -199,6 +206,14 @@ int main() {
             cout << "max: " << maxVal << endl;
             cout << "positive sum: " << positiveSum << endl;
             break;
+        }
+        case 9: {
+            float N, *N_point;
+            cout << "Введите N: ";
+            cin >> N;
+            N_point = &N;
+            task9(N_point);
+            cout << "Result = " << N;
         }
     }
     return 0;
