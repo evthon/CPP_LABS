@@ -3,7 +3,7 @@
 using namespace std;
 
 void task1() {
-    int a,b,P,S;
+    float a,b,P,S;
     cout << "Введите a: ";
     cin >> a;
     cout << "Введите b: ";
