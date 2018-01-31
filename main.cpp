@@ -1,12 +1,11 @@
 #include <iostream>
-#include <cstdio>
 using namespace std;
 
 void task1() {
 
     FILE *testFile;
 
-    testFile =  fopen("D:\\MyProject\\University\\C++\\test.txt", "w");
+    testFile =  fopen(R"(D:\MyProject\University\C++\test.txt)", "w");
 
     fprintf_s(testFile, "Hello");
 
@@ -17,7 +16,7 @@ void  task2() {
     FILE *testFile;
     char arr[] = "21-10-18\n";
     char *arr_point = arr;
-    testFile =  fopen("D:\\MyProject\\University\\C++\\test.txt", "a");
+    testFile =  fopen(R"(D:\MyProject\University\C++\test.txt)", "a");
     fprintf_s(testFile, arr_point);
     fclose(testFile);
 }
@@ -25,7 +24,7 @@ void  task2() {
 void task3() {
     FILE *testFile;
     float y;
-    testFile =  fopen("D:\\MyProject\\University\\C++\\test.txt", "a");
+    testFile =  fopen(R"(D:\MyProject\University\C++\test.txt)", "a");
     fprintf_s(testFile, "\n X    Y\n");
     for (int i=0; i<=5; i++) {
         fprintf_s(testFile, "%d   ", i);
