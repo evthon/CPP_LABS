@@ -1,5 +1,4 @@
 #include <iostream>
-#include "windows.h"
 #include <cmath>
 using namespace std;
 
@@ -239,7 +238,6 @@ void task9() {
 }
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
     int N;
     cout << "Задание: ";
     cin >> N;
