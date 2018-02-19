@@ -50,13 +50,15 @@ void task4() {
     result_file = fopen("result.txt", "w");
     while(!feof(file)) {
         fread(&arr[i], sizeof(float), 1, file);
-        printf_s(result_file, )
+        cout << arr[i] << " ";
+        fprintf_s(result_file, "%f ", &arr[i]);
         i++;
     }
-    for (int i = 0; i < 10; i++) {
-        cout << arr[i] << " ";
-    }
+//    for (int i = 0; i < 10; i++) {
+//        cout << arr[i] << " ";
+//    }
     fclose(file);
+    fclose(result_file);
 }
 
 
@@ -74,6 +76,9 @@ int main() {
             break;
         case 3:
             task3();
+            break;
+        case 4:
+            task4();
             break;
     }
 
