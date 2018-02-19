@@ -52,7 +52,7 @@ void task4() {
         fread(&arr[i], sizeof(float), 1, file);
         cout << arr[i] << " ";
         int a = 5;
-        fprintf_s(result_file, "%d ", &a);
+        fprintf_s(result_file, "%f\n" , arr[i]);
         i++;
     }
 //    for (int i = 0; i < 10; i++) {
