@@ -47,11 +47,12 @@ void task4() {
     FILE *result_file;
     int i = 0;
     file = fopen(file_name, "rb");
-    result_file = fopen("result.txt", "w");
+    result_file = fopen("result.txt", "wt");
     while(!feof(file)) {
         fread(&arr[i], sizeof(float), 1, file);
         cout << arr[i] << " ";
-        fprintf_s(result_file, "%f ", &arr[i]);
+        int a = 5;
+        fprintf_s(result_file, "%d ", &a);
         i++;
     }
 //    for (int i = 0; i < 10; i++) {
