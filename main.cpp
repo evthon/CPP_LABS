@@ -73,5 +73,6 @@ int main() {
         delete [] mass2[i];
     }
     delete [] mass2;
+
     return 0;
 }
