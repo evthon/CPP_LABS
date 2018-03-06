@@ -90,5 +90,6 @@ int main() {
         free(mass2[i]);
     }
     free(mass2);
+
     return 0;
 }
