@@ -53,9 +53,26 @@ T2 task3 (T2 num1, T2 num2) {
 
 }
 
-template <typename T3>
-void task5 () {
+template <typename T5>
+void task5 (T5* mass, int length, T5 num) {
+    int result;
 
+    for (int i = 0; i < length; i++) {
+        if (mass[i] > num) result++;
+    }
+    cout << "Result = " << result;
+
+}
+
+template <typename T6>
+T6* task6 (T6 t) {
+    int n;T6* mass;
+
+    cout << "Length of mass: ";
+    cin >> n;
+    mass = new T6[n];
+
+    return mass;
 }
 
 int main() {
@@ -63,19 +80,40 @@ int main() {
 
     cout << "Task: ";
     cin >> N;
-    cout << "Input the numbers: " << endl;
-    cin >> num1;
-    cin >> num2;
     switch (N) {
         case 1:
+            cout << "Input the numbers: " << endl;
+            cin >> num1;
+            cin >> num2;
             task1_1(num1,num2);
             task1_2(num1,num2);
             break;
         case 2:
+            cout << "Input the numbers: " << endl;
+            cin >> num1;
+            cin >> num2;
             task2(num1, num2);
             break;
         case 3:
+            cout << "Input the numbers: " << endl;
+            cin >> num1;
+            cin >> num2;
             task3(num1, num2);
+            break;
+        case 5:
+            double* mass;
+            mass = new double[5];
+            for (int i = 0; i < 5; ++i) {
+                mass[i] = i*2;
+                cout << mass[i] << " ";
+            }
+            task5(mass, 5, 3.0);
+            break;
+        case 6:
+            double *mass1, t;
+            mass1 = task6(t);
+            mass1[0] = 1.46;
+            cout << mass[0];
             break;
     }
 
