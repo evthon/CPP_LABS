@@ -26,7 +26,7 @@ void  task2() {
 void task3() {
     FILE *testFile;
     double y;
-    testFile =  fopen(R"(D:\MyProject\University\C++\test.txt)", "a");
+    testFile =  fopen(R"(D:\MyProject\University\C++\test.txt)", "at");
     fprintf_s(testFile, " X    Y\n");
     for (int i=0; i<=5; i++) {
         fprintf_s(testFile, "%d   ", i);
@@ -41,12 +41,17 @@ void task3() {
 void task4() {
     FILE *testFile = fopen(R"(D:\MyProject\University\C++\test.txt)", "rt");
     char arr[50], arr1[50];
+    int num1; float num2;
     if (testFile == nullptr) {
         printf_s("Error reading the file");
     } else {
+        fscanf(testFile,"%s%s",arr, arr1);
+        printf("%s\n%s\n", arr, arr1);
+        fscanf(testFile,"%s%s",arr, arr1);
+        printf("%s   %s\n", arr, arr1);
         while (!feof(testFile)) {
-            fscanf(testFile,"%s%s",arr, arr1);
-            printf_s("%s   %s\n", arr, arr1);
+            fscanf(testFile,"%d   %f\n",&num1, &num2);
+            printf("%d   %.3f\n", num1, num2);
         }
     }
     fclose(testFile);
@@ -66,7 +71,7 @@ void task5() {
 }
 
 void task6() {
-    float a, b, X; int A = 28; char filename[20]; char path[100] = "D:\\MyProject\\University\\C++\\",  path_end[] = ".txt";
+    float a, b, X; int A = 28; char filename[20]; char path[100] = R"(D:\MyProject\University\C++\)",  path_end[] = ".txt";
     double (*sinn)(double);
     sinn = sin;
 
