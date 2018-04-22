@@ -3,5 +3,5 @@ project(tempProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp sheet.h)
 add_executable(tempProject ${SOURCE_FILES})
