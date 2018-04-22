@@ -5,8 +5,7 @@ using namespace std;
 int main() {
 
     sheet ls;
-    ls.subject_inf();
-    ls.middle_mark();
+    ls.students_list_grants();
 
     return 0;
 }
