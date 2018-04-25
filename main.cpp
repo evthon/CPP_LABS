@@ -110,10 +110,10 @@ int main() {
             task5(mass, 5, 3.0);
             break;
         case 6:
-            double *mass1, t;
+            double *mass1, t=0;
             mass1 = task6(t);
             mass1[0] = 1.46;
-            cout << mass[0];
+            cout << mass1[0];
             break;
     }
 
