@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-typedef struct {
+struct myComplex {
     double Rl, Im;
 
     void input() {
@@ -25,7 +25,7 @@ typedef struct {
         Rl = 0;
         Im = 1;
     }
-} myComplex;
+} ;
 
 myComplex task6(myComplex num1, myComplex num2, int N) {
 
